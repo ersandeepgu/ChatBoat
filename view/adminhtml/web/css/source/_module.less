@@ -1,0 +1,20 @@
+@chatboat-icons-admin__font-name-path: '@{baseDir}Sandeep_Chatboat/fonts/chatboat';
+@chatboat-icons-admin__font-name : 'CedReverb';
+
+.lib-font-face(
+  @family-name:@chatboat-icons-admin__font-name,
+  @font-path: @chatboat-icons-admin__font-name-path,
+  @font-weight: normal,
+  @font-style: normal
+);
+
+.admin__menu .item-chatsystem.parent.level-0 > a:before {
+  font-family: @chatboat-icons-admin__font-name;
+  content: "\e900";
+  color: #8a9296;
+  display: block;
+  font-size: 3rem;
+  height: 3rem;
+}
+
+

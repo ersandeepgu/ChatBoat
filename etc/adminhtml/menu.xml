@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Backend/etc/menu.xsd">
+    <menu>
+        <add 
+            id="Sandeep_Chatboat::chatsystem" 
+            sortOrder="10" 
+            title="Chat System" 
+            module="Sandeep_Chatboat" 
+            resource="Magento_Backend::chatsystem_elements"             
+        />  
+        <add 
+            id="Sandeep_Chatboat::chat" 
+            title="Chat" 
+            module="Sandeep_Chatboat" 
+            sortOrder="15" 
+            parent="Sandeep_Chatboat::chatsystem" 
+            action="lofchatsystem/chat/index" 
+            resource="Sandeep_Chatboat::chat"
+        />
+        <add 
+            id="Sandeep_Chatboat::blacklist_manage" 
+            title="Manage Blacklist" 
+            module="Sandeep_Chatboat" 
+            sortOrder="20" 
+            parent="Sandeep_Chatboat::chatsystem" 
+            action="lofchatsystem/blacklist/index" 
+            resource="Sandeep_Chatboat::blacklist"
+        />
+        <add 
+            id="Sandeep_Chatboat::settings" 
+            title="Configuration" 
+            module="Sandeep_Chatboat" 
+            sortOrder="30" 
+            action="adminhtml/system_config/edit/section/sandeep" 
+            resource="Sandeep_Chatboat::config_chatsystem" 
+            parent="Sandeep_Chatboat::chatsystem"
+        /> 
+    </menu>
+</config>
